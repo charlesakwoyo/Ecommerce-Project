@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cart</title>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="navbar bg-white shadow-md">
+    <div class="logo text-2xl font-bold p-4">Elashadai Shop</div>
+    <nav>
+      <ul class="flex space-x-4 p-4">
+        <li><a href="index.html" class="text-blue-500 hover:underline">Home</a></li>
+        <li><a href="products.html" class="text-blue-500 hover:underline">Shop</a></li>
+        <li><a href="cart.html" class="text-blue-500 hover:underline">Cart</a></li>
+        <li><a href="contact.html" class="text-blue-500 hover:underline">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="cart p-8">
+    <h2 class="text-3xl font-bold text-center mb-8">Your Cart</h2>
+    <div class="cart-items space-y-4">
+      <div class="cart-item flex items-center bg-white shadow-md rounded-lg p-4">
+        <img src="images/photo-1491553895911-0055eca6402d.avif" alt="Product 1" class="w-24 h-24 object-cover rounded-md mr-4" />
+        <div class="item-details flex-1">
+          <h3 class="text-lg font-semibold">Classic Sneakers</h3>
+          <p class="text-gray-600">Ksh 1,200</p>
+        </div>
+        <div class="quantity flex items-center space-x-2">
+          <button class="decrease bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">-</button>
+          <span class="quantity-value text-lg font-semibold">1</span>
+          <button class="increase bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">+</button>
+        </div>
+        <button class="remove-item bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">Remove</button>
+       <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ml-4">add </button> 
+      </div>
+      <div class="cart-item flex items-center bg-white shadow-md rounded-lg p-4">
+        <img src="images/photo-1574920162043-b872873f19c8.avif" alt="Product 2" class="w-24 h-24 object-cover rounded-md mr-4" />
+        <div class="item-details flex-1">
+          <h3 class="text-lg font-semibold">Wireless Headphones</h3>
+          <p class="text-gray-600">Ksh 2,800</p>
+        </div>
+        <div class="quantity flex items-center space-x-2">
+          <button class="decrease bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">-</button>
+          <span class="quantity-value text-lg font-semibold">1</span>
+          <button class="increase bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">+</button>
+        </div>
+        <button class="remove-item bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">Remove</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ml-4">add </button>
+      </div>
+      <div class="cart-item flex items-center bg-white shadow-md rounded-lg p-4">
+        <img src="images/photo-1722153297252-8fb1645f5bfb.avif" alt="Product 3" class="w-24 h-24 object-cover rounded-md mr-4" />
+        <div class="item-details flex-1">
+          <h3 class="text-lg font-semibold">Smartwatch</h3>
+          <p class="text-gray-600">Ksh 4,000</p>
+        </div>
+        <div class="quantity flex items-center space-x-2">
+          <button class="decrease bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">-</button>
+          <span class="quantity-value text-lg font-semibold">1</span>
+          <button class="increase bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">+</button>
+        </div>
+        <button class="remove-item bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">Remove</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ml-4">add </button>
+      </div>
+      <div class="cart-item flex items-center bg-white shadow-md rounded-lg p-4">
+        <img src="images/photo-1621609764049-5ee1db3d7c35.avif" alt="Product 4" class="w-24 h-24 object-cover rounded-md mr-4" />
+        <div class="item-details flex-1">
+          <h3 class="text-lg font-semibold">Backpack</h3>
+          <p class="text-gray-600">Ksh 1,500</p>
+        </div>
+        <div class="quantity flex items-center space-x-2">
+          <button class="decrease bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">-</button>
+          <span class="quantity-value text-lg font-semibold">1</span>
+          <button class="increase bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">+</button>
+        </div>
+        <button class="remove-item bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">Remove</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ml-4">add </button>
+      </div>
+      <div class="cart-item flex items-center bg-white shadow-md rounded-lg p-4">
+        <img src="images/images.jpg" alt="Product 5" class="w-24 h-24 object-cover rounded-md mr-4" />
+        <div class="item-details flex-1">
+          <h3 class="text-lg font-semibold">Stylish Sunglasses</h3>
+          <p class="text-gray-600">Ksh 800</p>
+        </div>
+        <div class="quantity flex items-center space-x-2">
+          <button class="decrease bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">-</button>
+          <span class="quantity-value text-lg font-semibold">1</span>
+          <button class="increase bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">+</button>
+        </div>
+        <button class="remove-item bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">Remove</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ml-4">add </button>
+      </div>
+      <div class="cart-item flex items-center bg-white shadow-md rounded-lg p-4">
+        <img src="images/LL_2411_Leather_Wallet_1.webp" alt="Product 6" class="w-24 h-24 object-cover rounded-md mr-4" />
+        <div class="item-details flex-1">
+          <h3 class="text-lg font-semibold">Leather Wallet</h3>
+          <p class="text-gray-600">Ksh 1,000</p>
+        </div>
+        <div class="quantity flex items-center space-x-2">
+          <button class="decrease bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">-</button>
+          <span class="quantity-value text-lg font-semibold">1</span>
+          <button class="increase bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">+</button>
+        </div>
+        <button class="remove-item bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">Remove</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ml-4">add </button>
+      </div>
+      <div class="cart-item flex items-center bg-white shadow-md rounded-lg p-4">
+        <img src="images/photo-1593642632850-e3b1f2c5a7d4.avif" alt="Product 7" class="w-24 h-24 object-cover rounded-md mr-4" />
+        <div class="item-details flex-1">
+          <h3 class="text-lg font-semibold">Bluetooth Speaker</h3>
+          <p class="text-gray-600">Ksh 3,500</p>
+        </div>
+        <div class="quantity flex items-center space-x-2">
+          <button class="decrease bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">-</button>
+          <span class="quantity-value text-lg font-semibold">1</span>
+          <button class="increase bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">+</button>
+        </div>
+        <button class="remove-item bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">Remove</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ml-4">add </button>
+      </div>
+      <div class="cart-item flex items-center bg-white shadow-md rounded-lg p-4">
+        <img src="images/shopping.webp" alt="Product 8" class="w-24 h-24 object-cover rounded-md mr-4" />
+        <div class="item-details flex-1">
+          <h3 class="text-lg font-semibold">OPPO A3X</h3>
+          <p class="text-gray-600">Ksh 15,300</p>
+        </div>
+        <div class="quantity flex items-center space-x-2">
+          <button class="decrease bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">-</button>
+          <span class="quantity-value text-lg font-semibold">1</span>
+          <button class="increase bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">+</button>
+        </div>
+        <button class="remove-item bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">Remove</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ml-4">add </button>
+      </div>
+      <div class="cart-item flex items-center bg-white shadow-md rounded-lg p-4">
+        <img src="images/photo-1593642632850-e3b1f2c5a7d4.avif" alt="Product 9" class="w-24 h-24 object-cover rounded-md mr-4" />
+        <div class="item-details flex-1">
+          <h3 class="text-lg font-semibold">Wireless Charger</h3>
+          <p class="text-gray-600">Ksh 1500</p>
+        </div>
+        <div class="quantity flex items-center space-x-2">
+          <button class="decrease bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">-</button>
+          <span class="quantity-value text-lg font-semibold">1</span>
+          <button class="increase bg-gray-200 px-2 py-1 rounded hover:bg-gray-300">+</button>
+        </div>
+        <button class="remove-item bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4">Remove</button>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 ml-4">add </button>
+
+
+
+  </section> 
+</body>
+</html>
