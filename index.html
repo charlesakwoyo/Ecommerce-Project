@@ -3,44 +3,279 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
   <title>Elshadai Shop</title>
-</head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="navbar bg-white shadow-md">
-    <div class="logo text-2xl font-bold p-4">Elshadai Shop</div>
-    <nav>
-      <ul class="flex space-x-4 p-4">
-        <li><a href="index.html" class="text-blue-500 hover:underline">Home</a></li>
-        <li><a href="products.html" class="text-blue-500 hover:underline">Shop</a></li>
-        <li><a href="cart.html" class="text-blue-500 hover:underline">Cart</a></li>
-        <li><a href="contact.html" class="text-blue-500 hover:underline">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section class="text-center py-16 bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-    <h1 class="text-4xl font-bold mb-4">Welcome to Elshadai Shop</h1>
-    <p class="text-lg mb-6">Affordable & Quality Products at Your Fingertips</p>
-    <div class="hero-image h-64 bg-cover bg-center mb-6" style="background-image: url('path-to-your-image.jpg');"></div>
-    <div class="hero-text">
-      <h2 class="text-2xl font-semibold mb-2">Discover Our Collection</h2>
-      <p class="mb-4">Shop the latest trends and styles.</p>
-      <a href="products.html" class="btn bg-white text-blue-500 px-6 py-2 rounded shadow hover:bg-gray-100">Shop Now</a>
-    </div>
-    <div class="hero-image h-64 bg-cover bg-center mt-6" style="background-image: url('path-to-your-image.jpg');"></div>
-    <div class="hero-text mt-4">
-      <h2 class="text-2xl font-semibold mb-2">Add Desired Goods</h2>
-      <p class="mb-4">You can add any goods to your cart</p>
-      <a href="cart.html" class="btn bg-white text-blue-500 px-6 py-2 rounded shadow hover:bg-gray-100">Add to cart</a>
-      </div>
+  <!-- Custom Font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      <div class="hero-image h-64 bg-cover bg-center mt-6" style="background-image: url('path-to-your-image.jpg');"></div>
-    <div class="hero-text mt-4">
-        <h2 class="text-2xl font-semibold mb-2">Contact Us</h2>
-        <p class="mb-4">We are here to help you with any inquiries.</p>
-        <a href="contact.html" class="btn bg-white text-blue-500 px-6 py-2 rounded shadow hover:bg-gray-100">Contact Us</a>
-      </div>
-      
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7fafc;
+      color: #4a5568;
+    }
+
+    /* Navbar Styles */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #3182ce;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #3182ce;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #2b6cb0;
+      border-bottom: 2px solid #3182ce;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      background: linear-gradient(to right, #5a67d8, #805ad5);
+      color: #ffffff;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 40px;
+    }
+
+    .hero a {
+      background-color: #ffffff;
+      color: #3182ce;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .hero a:hover {
+      background-color: #3182ce;
+      color: #ffffff;
+    }
+
+    /* Featured Products Section */
+    .products {
+      padding: 60px 0;
+      background-color: #f7fafc;
+      text-align: center;
+    }
+
+    .products h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #2d3748;
+    }
+
+    .product-card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 1rem;
+      color: #4a5568;
+      margin-bottom: 20px;
+    }
+
+    .product-card a {
+      text-decoration: none;
+      color: #3182ce;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .product-card a:hover {
+      color: #2b6cb0;
+    }
+
+    .product-card .btn-buy {
+      background-color: #3182ce;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card .btn-buy:hover {
+      background-color: #2b6cb0;
+    }
+
+    /* About Us Section */
+    .about-us {
+      background: linear-gradient(to right, #805ad5, #5a67d8);
+      padding: 60px 0;
+      color: white;
+      text-align: center;
+    }
+
+    .about-us h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-us p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+
+    .about-us a {
+      background-color: #ffffff;
+      color: #3182ce;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .about-us a:hover {
+      background-color: #3182ce;
+      color: #ffffff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2d3748;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Elshadai Shop</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Welcome to Elshadai Shop</h1>
+      <p>Discover amazing products at the best prices. Your satisfaction is our priority!</p>
+      <a href="products.html">Shop Now</a>
+      <a href="cart.html">Go to Cart</a>
+    </div>
   </section>
+
+  <!-- Featured Products Section -->
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-cards">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <img src="path-to-your-image.jpg" alt="Product">
+        <h3>Product Name</h3>
+        <p>Short description of the product. Amazing features included!</p>
+        <div>
+          <a href="product-details.html">View Details</a>
+          <a href="cart.html" class="btn-buy">Buy Now</a>
+        </div>
+      </div>
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <img src="path-to-your-image.jpg" alt="Product">
+        <h3>Product Name</h3>
+        <p>Short description of the product. Amazing features included!</p>
+        <div>
+          <a href="product-details.html">View Details</a>
+          <a href="cart.html" class="btn-buy">Buy Now</a>
+        </div>
+      </div>
+      <!-- More products can be added in similar structure -->
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about-us">
+    <h2>About Elshadai Shop</h2>
+    <p>We offer a wide variety of products, ensuring the highest quality at affordable prices. Shop with us and enjoy the experience!</p>
+    <a href="about.html">Learn More</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Elshadai Shop. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
