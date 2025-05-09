@@ -85,5 +85,41 @@
                                 <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add to Cart</button>
                                 </div>
   </section>
+  <script>
+    const addToCartButtons = document.querySelectorAll('.product-card button');
+    let cart = [];
+  
+    
+    addToCartButtons.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        
+        const productCard = button.parentElement;
+        const productName = productCard.querySelector('h3').innerText;
+        const productPrice = productCard.querySelector('p').innerText;
+        const productImage = productCard.querySelector('img').src;
+  
+        
+        const product = {
+          name: productName,
+          price: productPrice,
+          image: productImage,
+        };
+  
+      
+        cart.push(product);
+        console.log(cart);
+  
+        
+        const cartCounter = document.getElementById('cart-counter');
+        if (cartCounter) {
+          cartCounter.innerText = cart.length;
+        }
+        alert(`${productName} has been added to your cart!`);
+      });
+    });
+  </script>
+  <footer class="bg-white mt-8 p-4 text-center text-gray-600">
+    &copy; 2025 Elshadai Shop. All rights reserved.
+  </footer>
 </body>
 </html>
