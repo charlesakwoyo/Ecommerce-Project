@@ -26,3 +26,27 @@ const slider = document.getElementById('slider');
       index = (index + 1) % totalCards;
       slider.style.transform = `translateX(-${index * (cards[0].offsetWidth + 20)}px)`;
     }, 2000);
+     document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('sidebar').classList.add('active');
+    document.getElementById('overlay').classList.add('active');
+  });
+
+  document.getElementById('close-btn').addEventListener('click', () => {
+    document.getElementById('sidebar').classList.remove('active');
+    document.getElementById('overlay').classList.remove('active');
+  });
+
+  document.getElementById('overlay').addEventListener('click', () => {
+    document.getElementById('sidebar').classList.remove('active');
+    document.getElementById('overlay').classList.remove('active');
+  });
+
+
+  function scrollSlider(direction) {
+    const slider = document.getElementById('slider');
+    const scrollAmount = 320; 
+    slider.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }

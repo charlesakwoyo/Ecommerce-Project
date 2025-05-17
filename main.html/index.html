@@ -19,10 +19,9 @@
   </nav>
 </header>
 
-<!-- Overlay -->
 <div class="overlay" id="overlay"></div>
 
-<!-- Sidebar -->
+
 <div class="sidebar" id="sidebar">
   <div class="close-btn" id="close-btn">&times;</div>
   <ul class="sidebar-links">
@@ -80,33 +79,9 @@
 </footer>
 
 <script src="/main/index.js"></script>
-<script>
-  // Sidebar toggle
-  document.getElementById('menu-toggle').addEventListener('click', () => {
-    document.getElementById('sidebar').classList.add('active');
-    document.getElementById('overlay').classList.add('active');
-  });
 
-  document.getElementById('close-btn').addEventListener('click', () => {
-    document.getElementById('sidebar').classList.remove('active');
-    document.getElementById('overlay').classList.remove('active');
-  });
-
-  document.getElementById('overlay').addEventListener('click', () => {
-    document.getElementById('sidebar').classList.remove('active');
-    document.getElementById('overlay').classList.remove('active');
-  });
-
-  // Slider scroll
-  function scrollSlider(direction) {
-    const slider = document.getElementById('slider');
-    const scrollAmount = 320; // image width + margin
-    slider.scrollBy({
-      left: direction * scrollAmount,
-      behavior: 'smooth'
-    });
-  }
-</script>
+  
+ 
 
 </body>
 </html>
